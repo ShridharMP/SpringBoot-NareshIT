@@ -1,4 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<session version="1.0">
-<refactoring comment="Rename method &apos;com.example.namedquery.model.Employee.setDepartmentId(...)&apos; to &apos;setDepartmentName&apos;&#x0D;&#x0A;- Original project: &apos;NamedQuery&apos;&#x0D;&#x0A;- Original element: &apos;com.example.namedquery.model.Employee.setDepartmentId(...)&apos;&#x0D;&#x0A;- Renamed element: &apos;com.example.namedquery.model.Employee.setDepartmentName(...)&apos;&#x0D;&#x0A;- Update references to refactored element" delegate="false" deprecate="false" description="Rename method &apos;setDepartmentId&apos;" flags="589830" id="org.eclipse.jdt.ui.rename.method" input="/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/&lt;com.example.namedquery.model{Employee.java[Employee~setDepartmentId~QString;" name="setDepartmentName" references="true" stamp="1626595934106" version="1.0"/>
-</session>
