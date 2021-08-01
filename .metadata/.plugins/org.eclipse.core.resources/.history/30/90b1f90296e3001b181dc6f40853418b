@@ -1,0 +1,64 @@
+package com.example.person.model;
+
+import java.util.Set;
+
+import javax.persistence.CascadeType;
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.ManyToMany;
+import javax.persistence.Table;
+
+@Entity
+@Table(name = "publisher_table")
+public class Publisher {
+	@Id
+	@Column(name = "publish_id")
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	private int pid;
+	@Column(name = "publisher_name")
+	private String publisherName;
+	@ManyToMany(cascade = CascadeType.ALL, mappedBy = "publishers")
+	private Set<Book> books;
+
+	public Publisher() {
+
+	}
+
+	public Publisher(int pid, String publisherName, Set<Book> books) {
+		this.pid = pid;
+		this.publisherName = publisherName;
+		this.books = books;
+	}
+
+	public Publisher(String publisherName) {
+		this.publisherName=publisherName;
+	}
+
+	public int getPid() {
+		return pid;
+	}
+
+	public void setPid(int pid) {
+		this.pid = pid;
+	}
+
+	public String getPublisherName() {
+		return publisherName;
+	}
+
+	public void setPublisherName(String publisherName) {
+		this.publisherName = publisherName;
+	}
+
+	public Set<Book> getBooks() {
+		return books;
+	}
+
+	public void setBooks(Set<Book> books) {
+		this.books = books;
+	}
+
+}
